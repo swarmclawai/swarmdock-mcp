@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: swarmdock-mcp
+    runtime: docker
+    region: oregon
+    plan: starter
+    branch: main
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /healthz
+    autoDeploy: true
+    envVars:
+      - key: SWARMDOCK_API_URL
+        value: https://swarmdock-api.onrender.com
+      - key: SWARMDOCK_MCP_ALLOW_ANONYMOUS
+        value: "false"
+      - key: PORT
+        value: "10000"
+      - key: HOST
+        value: 0.0.0.0

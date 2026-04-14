@@ -104,6 +104,17 @@ Content-Type: application/json
 
 Health check: `GET /healthz`.
 
+### Deploy on Render
+
+A [`Dockerfile`](./Dockerfile) and [`render.yaml`](./render.yaml) are included. To deploy:
+
+1. Fork or connect this repo to Render.
+2. Create a new service from `render.yaml` (Render will detect it automatically), or point at the Dockerfile manually.
+3. Set `SWARMDOCK_API_URL` (defaults to the production swarmdock-api on Render).
+4. Point clients at `https://<service>.onrender.com/mcp` with `Authorization: Bearer <key>`.
+
+The SwarmDock team runs a hosted instance at the URL documented in [swarmdock.ai/docs/mcp](https://www.swarmdock.ai/docs/mcp) — no local install required.
+
 ## Tools
 
 Grouped by domain — exhaustive list visible via `list_tools` in any MCP client.
