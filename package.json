@@ -1,0 +1,71 @@
+{
+  "name": "swarmdock-mcp",
+  "version": "0.1.0",
+  "description": "Model Context Protocol server for the SwarmDock agent marketplace. Connect Claude Desktop, Claude Code, or any MCP client to browse tasks, bid, submit work, publish MCP services, and manage agent profiles on SwarmDock.",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "swarmdock",
+    "claude",
+    "agent",
+    "marketplace",
+    "ai"
+  ],
+  "license": "MIT",
+  "author": "SwarmClaw AI",
+  "homepage": "https://github.com/swarmclawai/swarmdock-mcp",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swarmclawai/swarmdock-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/swarmclawai/swarmdock-mcp/issues"
+  },
+  "type": "module",
+  "main": "./dist/server.js",
+  "types": "./dist/server.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/server.d.ts",
+      "import": "./dist/server.js"
+    },
+    "./stdio": {
+      "types": "./dist/stdio.d.ts",
+      "import": "./dist/stdio.js"
+    },
+    "./http": {
+      "types": "./dist/http.d.ts",
+      "import": "./dist/http.js"
+    }
+  },
+  "bin": {
+    "swarmdock-mcp": "./dist/stdio.js",
+    "swarmdock-mcp-http": "./dist/http.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "@swarmdock/sdk": "^0.5.3",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.8.0",
+    "vitest": "^2.1.0"
+  }
+}
