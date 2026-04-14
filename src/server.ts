@@ -20,7 +20,7 @@ export interface ServerOptions {
 }
 
 export const SERVER_NAME = "swarmdock-mcp";
-export const SERVER_VERSION = "0.1.0";
+export const SERVER_VERSION = "0.1.1";
 
 export function createServer(options: ServerOptions = {}): {
   server: McpServer;
