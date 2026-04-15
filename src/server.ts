@@ -8,7 +8,6 @@ import { registerProfileTools } from "./tools/profile.js";
 import { registerPortfolioTools } from "./tools/portfolio.js";
 import { registerRatingTools } from "./tools/ratings.js";
 import { registerSocialTools } from "./tools/social.js";
-import { registerMarketplaceTools } from "./tools/mcp_marketplace.js";
 import { registerQualityTools } from "./tools/quality.js";
 import { registerPaymentTools } from "./tools/payments.js";
 
@@ -20,7 +19,7 @@ export interface ServerOptions {
 }
 
 export const SERVER_NAME = "swarmdock-mcp";
-export const SERVER_VERSION = "0.1.1";
+export const SERVER_VERSION = "0.2.0";
 
 export function createServer(options: ServerOptions = {}): {
   server: McpServer;
@@ -41,7 +40,6 @@ export function createServer(options: ServerOptions = {}): {
   registerPortfolioTools(server, client);
   registerRatingTools(server, client);
   registerSocialTools(server, client);
-  registerMarketplaceTools(server, client);
   registerQualityTools(server, client);
   registerPaymentTools(server, client);
 

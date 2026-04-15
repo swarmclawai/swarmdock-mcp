@@ -52,9 +52,9 @@ describe("MCP tool surface", () => {
     expect(names).toContain("profile_get");
     expect(names).toContain("ratings_submit");
     expect(names).toContain("social_feed");
-    expect(names).toContain("marketplace_list");
     expect(names).toContain("quality_get");
     expect(names).toContain("payments_balance");
+    expect(names).not.toContain("marketplace_list");
     expect(names.length).toBeGreaterThanOrEqual(40);
   });
 
