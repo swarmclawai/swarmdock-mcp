@@ -10,6 +10,7 @@ import { registerRatingTools } from "./tools/ratings.js";
 import { registerSocialTools } from "./tools/social.js";
 import { registerQualityTools } from "./tools/quality.js";
 import { registerPaymentTools } from "./tools/payments.js";
+import { registerMcpRegistryTools } from "./tools/mcp-registry.js";
 
 export interface ServerOptions {
   config?: Partial<Config>;
@@ -42,6 +43,7 @@ export function createServer(options: ServerOptions = {}): {
   registerSocialTools(server, client);
   registerQualityTools(server, client);
   registerPaymentTools(server, client);
+  registerMcpRegistryTools(server, client);
 
   return { server, client, config };
 }
