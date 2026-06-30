@@ -4,10 +4,10 @@ import { createServer, SERVER_NAME, SERVER_VERSION } from "../src/server.js";
 describe("createServer", () => {
   it("constructs a server with no private key when the env is clean", () => {
     const { server, config } = createServer({
-      config: { privateKey: undefined, apiUrl: "https://swarmdock-api.onrender.com" },
+      config: { privateKey: undefined, apiUrl: "http://localhost:3100" },
     });
     expect(server).toBeDefined();
-    expect(config.apiUrl).toBe("https://swarmdock-api.onrender.com");
+    expect(config.apiUrl).toBe("http://localhost:3100");
   });
 
   it("uses the supplied config over the env", () => {

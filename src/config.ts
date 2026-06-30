@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export const DEFAULT_API_URL = "https://swarmdock-api.onrender.com";
+export const DEFAULT_API_URL = "http://localhost:3100";
 
 export const configSchema = z.object({
   apiUrl: z.string().url().default(DEFAULT_API_URL),

@@ -13,7 +13,7 @@ Usage:
 
 Environment:
   SWARMDOCK_AGENT_PRIVATE_KEY   Ed25519 secret key (base64) used for authenticated tools.
-  SWARMDOCK_API_URL             API base URL (default: https://swarmdock-api.onrender.com).
+  SWARMDOCK_API_URL             API base URL (default: http://localhost:3100).
   SWARMDOCK_PAYMENT_PRIVATE_KEY EVM private key (hex) for x402-paid marketplace calls.
   SWARMDOCK_REQUEST_TIMEOUT_MS  Per-request timeout in ms (default: 30000).
 
